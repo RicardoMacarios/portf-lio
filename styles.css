@@ -735,6 +735,100 @@ footer {
 
 .footer-destaque { color: var(--cyan); }
 
+/* HAMBURGER */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* RESPONSIVO — TABLET (≤ 768px) */
+@media (max-width: 768px) {
+  nav {
+    padding: 16px 24px;
+    position: relative;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: rgba(5, 8, 16, 0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 0;
+  }
+
+  .nav-links.open { display: flex; }
+
+  .nav-links li a {
+    display: block;
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+
+  .nav-btn { display: none; }
+
+  .nav-hamburger { display: flex; }
+
+  .hero { padding: 100px 24px 60px; }
+
+  .hero-btns { flex-direction: column; align-items: center; }
+
+  .stats { gap: 24px; flex-wrap: wrap; }
+
+  section { padding: 70px 24px; }
+
+  .sobre-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .projetos-grid { grid-template-columns: 1fr; }
+
+  .dif-grid { grid-template-columns: 1fr; }
+
+  .contato-card { width: auto; flex: 1; min-width: 120px; }
+}
+
+/* RESPONSIVO — MOBILE PEQUENO (≤ 480px) */
+@media (max-width: 480px) {
+  .hero { padding: 90px 20px 50px; }
+
+  .stats { flex-direction: column; gap: 16px; align-items: flex-start; padding: 0 10px; }
+
+  section { padding: 60px 20px; }
+
+  .sobre-img { width: 200px; height: 200px; }
+
+  .skills-grid { grid-template-columns: 1fr; }
+
+  .hero-btns a { width: 100%; justify-content: center; }
+}
+
 /* SCROLL REVEAL */
 .reveal {
   opacity: 0;
