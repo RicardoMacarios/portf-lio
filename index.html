@@ -4,17 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ricardo Parise | Desenvolvedor Backend</title>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <!-- NAV -->
-<nav>
-  <div class="logo">RP.</div>
+<nav id="nav">
+  <div class="logo">RP<span>.</span></div>
   <ul class="nav-links" id="nav-links">
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#habilidades">Habilidades</a></li>
+    <li><a href="#processo">Processo</a></li>
     <li><a href="#projetos">Projetos</a></li>
     <li><a href="#diferenciais">Diferenciais</a></li>
     <li><a href="#contato">Contato</a></li>
@@ -28,158 +31,189 @@
 </nav>
 
 <!-- HERO -->
-<div class="hero">
-  <div class="hero-glow"></div>
-  <div class="hero-glow2"></div>
-
-  <div class="badge">
-    <div class="badge-dot"></div>
-    Disponível para oportunidades
+<header class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-bg-row outline">RICARDO PARISE</div>
+    <div class="hero-bg-row filled">RICARDO <span>PARISE</span></div>
+    <div class="hero-bg-row outline">RICARDO PARISE</div>
   </div>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
 
-  <p class="hero-label">Desenvolvedor Backend</p>
+  <div class="hero-content">
+    <div class="badge">
+      <div class="badge-dot"></div>
+      Disponível para oportunidades
+    </div>
 
-  <h1 class="hero-name">
-    Ricardo Parise <span>Macarios Junior</span>
-  </h1>
+    <h1 class="hero-title">
+      Transformo lógica em <span>soluções reais</span>
+    </h1>
 
-  <p class="hero-sub">
-    Transformando lógica em soluções reais. Apaixonado por construir sistemas robustos, seguros e eficientes.
-  </p>
+    <p class="hero-sub">
+      Sou <strong>Ricardo Parise Macarios Junior</strong>, desenvolvedor backend. Criei o <strong>BarberVez</strong>, um SaaS de agendamento para barbearias em produção com cliente pagante.
+    </p>
 
-  <div class="hero-btns">
-    <a href="#projetos" class="btn-primary">↓ Ver Projetos</a>
-    <a href="#contato" class="btn-secondary">✉ Entrar em Contato</a>
-  </div>
+    <div class="hero-btns">
+      <a href="#projetos" class="btn-primary">Ver meus projetos</a>
+      <a href="#contato" class="btn-secondary">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        Entrar em contato
+      </a>
+      <a href="curriculo-ricardo-parise.pdf" download class="btn-secondary">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+        Baixar currículo
+      </a>
+    </div>
 
-  <div class="stats">
-    <div class="stat">
-      <div class="stat-icon">💻</div>
-      <div>
-        <div class="stat-num">3</div>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num">6</div>
         <div class="stat-label">Projetos entregues</div>
       </div>
-    </div>
-    <div class="stat">
-      <div class="stat-icon">📚</div>
-      <div>
+      <div class="stat-sep"></div>
+      <div class="stat">
         <div class="stat-num">+2</div>
         <div class="stat-label">Anos estudando</div>
       </div>
-    </div>
-    <div class="stat">
-      <div class="stat-icon">🎯</div>
-      <div>
-        <div class="stat-num">100%</div>
-        <div class="stat-label">Comprometimento</div>
+      <div class="stat-sep"></div>
+      <div class="stat">
+        <div class="stat-num">1</div>
+        <div class="stat-label">SaaS em produção</div>
       </div>
     </div>
   </div>
-</div>
+</header>
 
 <!-- SOBRE -->
-<section id="sobre">
-  <div class="sobre-grid reveal">
-    <div>
-      <div class="sobre-img">
-        <img src="fotooo.jpg" alt="Ricardo Macarios" class="foto-perfil">
+<div class="band band-navy">
+  <section id="sobre">
+    <div class="sobre-grid reveal">
+      <div class="sobre-foto">
+        <img src="img/perfil/foto.jpg" alt="Ricardo Parise Macarios Junior" class="foto-perfil">
       </div>
-      <p class="sobre-text">
-        Sou desenvolvedor backend apaixonado por criar soluções que resolvem problemas reais. Minha trajetória é marcada pelo aprendizado contínuo e pela aplicação prática do conhecimento em projetos reais.
-      </p>
-      <p class="sobre-text">
-        Acredito que a melhor tecnologia é aquela que faz diferença no dia a dia das pessoas — e é isso que busco em cada linha de código.
-      </p>
+
+      <div class="sobre-info">
+        <span class="pill"><span class="pill-dot"></span>Desenvolvedor Backend</span>
+        <h2 class="section-title left">Ricardo <span>Parise</span></h2>
+        <p class="sobre-text">
+          Sou estudante de <strong>Sistemas de Informação na FAFRAM</strong> e fundador do <strong>BarberVez</strong>, um SaaS de agendamento para barbearias em produção com cliente pagante — que desenvolvo sozinho, do requisito ao suporte.
+        </p>
+        <p class="sobre-text">
+          Trabalho como auxiliar de laboratório na <strong>Usina Alta Mogiana</strong>, onde criei os sistemas internos de gerenciamento de válvulas e de estoque químico. Hoje foco em backend, estudando <strong>Node.js, Express, PostgreSQL, PHP e Java</strong>.
+        </p>
+
+        <div class="sobre-cards">
+          <div class="mini-card">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>
+            </div>
+            SaaS em produção
+          </div>
+          <div class="mini-card">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
+            </div>
+            Autodidata
+          </div>
+          <div class="mini-card">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+            </div>
+            Autenticação &amp; RLS
+          </div>
+          <div class="mini-card">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
+            </div>
+            Código aberto no GitHub
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="sobre-cards">
-      <span class="section-label">Sobre Mim</span>
-      <h2 class="section-title">Quem é <span>Ricardo</span></h2>
-      <div class="sobre-card">
-        <div class="sobre-card-icon">🎯</div>
-        <div>
-          <h4>Foco em Resultados</h4>
-          <p>Cada projeto desenvolvido com objetivo claro: resolver um problema real com eficiência.</p>
-        </div>
-      </div>
-      <div class="sobre-card">
-        <div class="sobre-card-icon">⚡</div>
-        <div>
-          <h4>Aprendizado Rápido</h4>
-          <p>Capacidade de absorver novas tecnologias e aplicá-las em projetos reais rapidamente.</p>
-        </div>
-      </div>
-      <div class="sobre-card">
-        <div class="sobre-card-icon">🔒</div>
-        <div>
-          <h4>Segurança & Qualidade</h4>
-          <p>Comprometido com boas práticas de desenvolvimento, segurança e código limpo.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
+</div>
 
 <!-- HABILIDADES -->
-<div class="section-alt" id="habilidades">
-  <section>
-    <span class="section-label">Habilidades</span>
-    <h2 class="section-title">Tecnologias & <span>Competências</span></h2>
+<div class="band band-black">
+  <section id="habilidades">
+    <h2 class="section-title">Tecnologias &amp; <span>Competências</span></h2>
     <p class="section-desc">Ferramentas e tecnologias que utilizo para construir soluções sólidas e escaláveis.</p>
 
     <div class="skills-grid reveal">
       <div class="skill-card">
-        <div class="skill-card-icon">💻</div>
+        <div class="icon-circle">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
+        </div>
         <h4>Linguagens</h4>
         <div class="skill-tags">
           <span class="tag">JavaScript</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Python</span>
+          <span class="tag">SQL</span>
+          <span class="tag">PHP</span>
+          <span class="tag">Java (aprendendo)</span>
           <span class="tag">HTML5</span>
           <span class="tag">CSS3</span>
-          <span class="tag">SQL</span>
-          <span class="tag">Python</span>
-          <span class="tag">TypeScript</span>
-          <span class="tag">React</span>
         </div>
       </div>
       <div class="skill-card">
-        <div class="skill-card-icon">🗄️</div>
+        <div class="icon-circle">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>
+        </div>
         <h4>Banco de Dados</h4>
         <div class="skill-tags">
-          <span class="tag">Supabase</span>
           <span class="tag">PostgreSQL</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">Realtime</span>
+          <span class="tag">PostgREST</span>
         </div>
       </div>
       <div class="skill-card">
-        <div class="skill-card-icon">🔧</div>
+        <div class="icon-circle">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg>
+        </div>
         <h4>Ferramentas</h4>
         <div class="skill-tags">
           <span class="tag">Git</span>
           <span class="tag">GitHub</span>
           <span class="tag">Vercel</span>
+          <span class="tag">ESLint</span>
           <span class="tag">VS Code</span>
         </div>
       </div>
       <div class="skill-card">
-        <div class="skill-card-icon">🌐</div>
+        <div class="icon-circle">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 22h8M12 18v4"/></svg>
+        </div>
         <h4>Frontend</h4>
         <div class="skill-tags">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS Grid</span>
-          <span class="tag">Responsivo</span>
           <span class="tag">React</span>
+          <span class="tag">Next.js</span>
+          <span class="tag">Vite</span>
+          <span class="tag">Tailwind CSS</span>
+          <span class="tag">React Router</span>
+          <span class="tag">TanStack Query</span>
         </div>
       </div>
       <div class="skill-card">
-        <div class="skill-card-icon">🔐</div>
-        <h4>Backend & Auth</h4>
+        <div class="icon-circle">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <h4>Backend &amp; Auth</h4>
         <div class="skill-tags">
-          <span class="tag">Autenticação</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Express</span>
           <span class="tag">REST API</span>
+          <span class="tag">Autenticação</span>
           <span class="tag">CRUD</span>
           <span class="tag">RLS</span>
         </div>
       </div>
       <div class="skill-card">
-        <div class="skill-card-icon">✅</div>
+        <div class="icon-circle">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>
+        </div>
         <h4>Boas Práticas</h4>
         <div class="skill-tags">
           <span class="tag">Clean Code</span>
@@ -191,156 +225,311 @@
   </section>
 </div>
 
-<!-- PROJETOS -->
-<section id="projetos">
-  <span class="section-label">Projetos</span>
-  <h2 class="section-title">Trabalhos <span>Recentes</span></h2>
-  <p class="section-desc">Projetos reais que demonstram minha capacidade de criar soluções completas e funcionais.</p>
+<!-- PROCESSO -->
+<div class="band band-navy">
+  <section id="processo">
+    <h2 class="section-title">Como eu <span>trabalho</span></h2>
+    <p class="section-desc">Do problema ao sistema no ar, cada projeto segue um caminho claro.</p>
 
-  <div class="projetos-grid reveal">
-    <div class="projeto-card">
-      <div class="projeto-thumb">
-        🧪
-        <div class="projeto-badges">
-          <span class="pbadge pbadge-dest">⭐ Destaque</span>
-          <span class="pbadge pbadge-ok">Concluído</span>
+    <div class="steps reveal">
+      <div class="step">
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
         </div>
+        <span class="step-num">Etapa 1</span>
+        <h4>Entendimento</h4>
+        <p>Converso para entender o problema real e quem vai usar o sistema.</p>
       </div>
-      <div class="projeto-body">
-        <h3>EstoqueQuím</h3>
-        <p>Sistema de gerenciamento de almoxarifado químico com alertas de validade, histórico rastreável e controle de movimentações. Usado em ambiente real de empresa.</p>
-        <div class="projeto-tags">
-          <span class="tag">JavaScript</span>
-          <span class="tag">HTML5</span>
-          <span class="tag">CSS3</span>
-          <span class="tag">Supabase</span>
+      <div class="step">
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6M9 16h4"/></svg>
         </div>
-        <div class="projeto-btns">
-          <a href="https://github.com/RicardoMacarios/Controle-de-estoque-qu-mico" target="_blank" class="pbtn pbtn-secondary">↗ Código</a>
-        </div>
+        <span class="step-num">Etapa 2</span>
+        <h4>Planejamento</h4>
+        <p>Modelo o banco de dados e defino a estrutura da aplicação.</p>
       </div>
-    </div>
-
-    <div class="projeto-card">
-      <div class="projeto-thumb">
-        🚰
-        <div class="projeto-badges">
-          <span class="pbadge pbadge-dest">⭐ Destaque</span>
-          <span class="pbadge pbadge-ok">Concluído</span>
+      <div class="step">
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
         </div>
+        <span class="step-num">Etapa 3</span>
+        <h4>Desenvolvimento</h4>
+        <p>Código limpo, versionado e com autenticação segura.</p>
       </div>
-      <div class="projeto-body">
-        <h3>Gerenciamento de Válvulas</h3>
-        <p>Sistema web para centralizar a manutenção de válvulas industriais, controlando histórico, datas de revisão e status de cada equipamento. Conta com autenticação segura e dashboard interativo com acesso restrito a funcionários.</p>
-        <div class="projeto-tags">
-          <span class="tag">JavaScript</span>
-          <span class="tag">HTML5</span>
-          <span class="tag">CSS3</span>
-          <span class="tag">Supabase</span>
+      <div class="step">
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>
         </div>
-        <div class="projeto-btns">
-          <a href="https://github.com/RicardoMacarios/valve-management-system" target="_blank" class="pbtn pbtn-secondary">↗ Código</a>
-        </div>
+        <span class="step-num">Etapa 4</span>
+        <h4>Testes</h4>
+        <p>Valido cada fluxo para garantir que tudo funciona como esperado.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- DIFERENCIAIS -->
-<div class="section-alt" id="diferenciais">
-  <section>
-    <span class="section-label">Diferenciais</span>
-    <h2 class="section-title">Por que me <span>escolher</span></h2>
-    <p class="section-desc">O que me diferencia e faz de mim um profissional pronto para agregar valor à sua equipe.</p>
-
-    <div class="dif-grid reveal">
-      <div class="dif-card">
-        <div class="dif-card-header">
-          <div class="dif-icon">🎯</div>
-          <h4>Foco em Problemas Reais</h4>
+      <div class="step">
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.2 2.2 0 0 0-2.9-.1z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22.4 22.4 0 0 1-4 2z"/></svg>
         </div>
-        <p>Desenvolvo soluções com impacto prático, como o EstoqueQuím, que foi utilizado em ambiente real de empresa.</p>
-        <ul class="dif-list">
-          <li>Soluções orientadas a resultado</li>
-          <li>Foco em usabilidade real</li>
-          <li>Entrega consistente</li>
-        </ul>
-      </div>
-      <div class="dif-card">
-        <div class="dif-card-header">
-          <div class="dif-icon">⚡</div>
-          <h4>Aprendizado Acelerado</h4>
-        </div>
-        <p>Capacidade comprovada de absorver novas tecnologias e aplicá-las rapidamente em projetos reais.</p>
-        <ul class="dif-list">
-          <li>Autodidatismo</li>
-          <li>Estudo contínuo</li>
-          <li>Aplicação prática</li>
-        </ul>
-      </div>
-      <div class="dif-card">
-        <div class="dif-card-header">
-          <div class="dif-icon">🔒</div>
-          <h4>Backend Seguro</h4>
-        </div>
-        <p>Experiência com autenticação, controle de acesso e banco de dados em nuvem com boas práticas de segurança.</p>
-        <ul class="dif-list">
-          <li>Autenticação robusta</li>
-          <li>Banco de dados seguro</li>
-          <li>Clean Code</li>
-        </ul>
-      </div>
-      <div class="dif-card">
-        <div class="dif-card-header">
-          <div class="dif-icon">📈</div>
-          <h4>Evolução Constante</h4>
-        </div>
-        <p>Comprometido com crescimento contínuo como profissional e com a qualidade de cada entrega.</p>
-        <ul class="dif-list">
-          <li>Atualização constante</li>
-          <li>Boas práticas</li>
-          <li>Visão de produto</li>
-        </ul>
+        <span class="step-num">Etapa 5</span>
+        <h4>Entrega</h4>
+        <p>Deploy em produção e acompanhamento para ajustes.</p>
       </div>
     </div>
   </section>
 </div>
 
-<!-- CONTATO -->
-<section id="contato">
-  <div class="contato-center reveal">
-    <span class="section-label">Contato</span>
-    <h2 class="section-title">Vamos <span>trabalhar juntos?</span></h2>
-    <p class="contato-sub">Estou aberto a oportunidades CLT, freelances e colaborações em projetos desafiadores.</p>
-    <div class="contato-loc">📍 São Joaquim da Barra, Brasil — Remoto ou presencial</div>
+<!-- PROJETOS -->
+<div class="band band-black">
+  <section id="projetos">
+    <h2 class="section-title">Trabalhos <span>Recentes</span></h2>
+    <p class="section-desc">Um SaaS com cliente pagante, um site para esse cliente, dois sistemas internos em uso na indústria e projetos para ONGs e saúde.</p>
 
-    <div class="contato-cards">
-      <a href="https://github.com/RicardoMacarios" target="_blank" class="contato-card">
-        <div class="contato-card-icon">🐙</div>
-        <span>GitHub</span>
-        <small>Meus repositórios</small>
+    <article class="projeto-destaque reveal">
+      <a href="https://barbervez.com.br/login" target="_blank" class="destaque-img">
+        <img src="img/barbervez/capa.jpg" alt="Tela de login do BarberVez em produção" loading="lazy">
+        <div class="projeto-badges">
+          <span class="pbadge pbadge-live"><span class="live-dot"></span>Em produção</span>
+          <span class="pbadge pbadge-dest">Cliente pagante</span>
+        </div>
       </a>
-      <a href="https://www.linkedin.com/in/ricardo-macarios-" target="_blank" class="contato-card">
-        <div class="contato-card-icon">💼</div>
-        <span>LinkedIn</span>
-        <small>Perfil profissional</small>
+      <div class="destaque-body">
+        <span class="step-num">Projeto principal · SaaS</span>
+        <h3>BarberVez</h3>
+        <p>Plataforma de gestão para barbearias, <strong>em produção e com cliente pagante</strong>. O cliente agenda o horário online e o dono acompanha o negócio num painel próprio.</p>
+        <ul class="destaque-list">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Agendamento online para clientes</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Visão financeira para o dono</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 16v-4M12 16V8M17 16v-7"/></svg>Faturamento mensal</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg>Melhor dia da semana</li>
+        </ul>
+        <div class="projeto-tags">
+          <span class="tag">React</span>
+          <span class="tag">Vite</span>
+          <span class="tag">Tailwind CSS</span>
+          <span class="tag">React Router</span>
+          <span class="tag">TanStack Query</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Realtime</span>
+          <span class="tag">Vercel</span>
+        </div>
+        <a href="https://barbervez.com.br/login" target="_blank" class="btn-primary">Ver online ↗</a>
+      </div>
+    </article>
+
+    <article class="projeto-destaque reverse reveal">
+      <a href="https://alves-barber-pearl.vercel.app/" target="_blank" class="destaque-img">
+        <img src="img/alves-barbershop/capa.jpg" alt="Landing page da Alves BarberShop" loading="lazy">
+        <div class="projeto-badges">
+          <span class="pbadge pbadge-live"><span class="live-dot"></span>No ar</span>
+          <span class="pbadge pbadge-dest">Cliente BarberVez</span>
+        </div>
       </a>
-      <a href="mailto:juniormacarios92@gmail.com" class="contato-card">
-        <div class="contato-card-icon">✉️</div>
-        <span>E-mail</span>
-        <small>juniormacarios92@gmail.com</small>
-      </a>
+      <div class="destaque-body">
+        <span class="step-num">Site para cliente · Landing page</span>
+        <h3>Alves BarberShop</h3>
+        <p>Landing page feita para a <strong>Alves BarberShop, barbearia cliente do BarberVez</strong>. O botão de agendar leva direto para a agenda da barbearia dentro do BarberVez.</p>
+        <ul class="destaque-list">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Agendamento integrado ao BarberVez</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>Contato direto pelo WhatsApp</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>Layout responsivo</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.2 2.2 0 0 0-2.9-.1z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22.4 22.4 0 0 1-4 2z"/></svg>Deploy na Vercel</li>
+        </ul>
+        <div class="projeto-tags">
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Vercel</span>
+        </div>
+        <a href="https://alves-barber-pearl.vercel.app/" target="_blank" class="btn-primary">Ver site ↗</a>
+      </div>
+    </article>
+
+    <div class="projetos-grid reveal">
+      <article class="projeto-card">
+        <div class="projeto-thumb has-img carrossel moldura" data-carrossel>
+          <div class="carrossel-trilho">
+            <img src="img/estoquequim/1-visao-geral.jpg" alt="EstoqueQuím: visão geral com alertas de validade" loading="lazy">
+            <img src="img/estoquequim/2-estoque.jpg" alt="EstoqueQuím: tabela de estoque com status de validade" loading="lazy">
+            <img src="img/estoquequim/3-cadastro.jpg" alt="EstoqueQuím: cadastro de produto com fabricante e lote" loading="lazy">
+            <img src="img/estoquequim/4-movimentacao.jpg" alt="EstoqueQuím: registro de movimentação" loading="lazy">
+            <img src="img/estoquequim/5-historico.jpg" alt="EstoqueQuím: histórico de movimentações" loading="lazy">
+          </div>
+          <button class="carrossel-seta anterior" aria-label="Imagem anterior"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+          <button class="carrossel-seta proxima" aria-label="Próxima imagem"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+          <div class="carrossel-pontos"></div>
+          <div class="projeto-badges">
+            <span class="pbadge pbadge-ok">Concluído</span>
+          </div>
+        </div>
+        <div class="projeto-body">
+          <h3>EstoqueQuím</h3>
+          <p>Controle de estoque de produtos químicos com vencimento de cada reagente, registro de fabricante e lote e histórico de movimentações. <strong>Em uso real na indústria.</strong></p>
+          <div class="projeto-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">Supabase</span>
+          </div>
+          <a href="https://github.com/RicardoMacarios/Controle-de-estoque-qu-mico" target="_blank" class="pbtn">Ver código ↗</a>
+        </div>
+      </article>
+
+      <article class="projeto-card">
+        <div class="projeto-thumb">
+          <span class="projeto-thumb-text">VÁLVULAS</span>
+          <div class="icon-circle big">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.2 4.2l2.9 2.9M16.9 16.9l2.9 2.9M1 12h4M19 12h4M4.2 19.8l2.9-2.9M16.9 7.1l2.9-2.9"/></svg>
+          </div>
+          <div class="projeto-badges">
+            <span class="pbadge pbadge-dest">Destaque</span>
+            <span class="pbadge pbadge-ok">Concluído</span>
+          </div>
+        </div>
+        <div class="projeto-body">
+          <h3>Gerenciamento de Válvulas</h3>
+          <p>Substituiu o controle em papel na indústria e <strong>reduziu em 30% o tempo de localização</strong> das válvulas. Status em tempo real (Pronta, Entregue, Manutenção, Descartada) e assinatura digital na entrega.</p>
+          <div class="projeto-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">Supabase</span>
+          </div>
+          <a href="https://github.com/RicardoMacarios/valve-management-system" target="_blank" class="pbtn">Ver código ↗</a>
+        </div>
+      </article>
+
+      <article class="projeto-card">
+        <div class="projeto-thumb">
+          <span class="projeto-thumb-text">APAE</span>
+          <div class="icon-circle big">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"/><path d="M3.2 12H9l.5-1 2 4.5 2-7 1.5 3.5h5.3"/></svg>
+          </div>
+          <div class="projeto-badges">
+            <span class="pbadge pbadge-dest">Hackathon</span>
+          </div>
+        </div>
+        <div class="projeto-body">
+          <h3>VidaAPAE</h3>
+          <p>Gestão de pacientes para a APAE Ituverava, feito em hackathon <strong>como único desenvolvedor da equipe</strong>. Controle de acesso por perfil, prontuário digital, avaliações por sessão, relatórios em PDF e integração com WhatsApp.</p>
+          <div class="projeto-tags">
+            <span class="tag">React</span>
+            <span class="tag">Vite</span>
+            <span class="tag">Tailwind CSS</span>
+          </div>
+          <a href="https://github.com/RicardoMacarios/hack-apae" target="_blank" class="pbtn">Ver código ↗</a>
+        </div>
+      </article>
+
+      <article class="projeto-card">
+        <div class="projeto-thumb">
+          <span class="projeto-thumb-text">ONGS</span>
+          <div class="icon-circle big">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg>
+          </div>
+          <div class="projeto-badges">
+            <span class="pbadge pbadge-ok">Concluído</span>
+          </div>
+        </div>
+        <div class="projeto-body">
+          <h3>Rede Esperança</h3>
+          <p>Painel administrativo para ONGs com login, cadastro de ONGs e voluntários, criação de campanhas e dashboard. Autenticação e banco estruturados no Supabase.</p>
+          <div class="projeto-tags">
+            <span class="tag">React</span>
+            <span class="tag">Vite</span>
+            <span class="tag">Supabase</span>
+          </div>
+          <a href="https://github.com/RicardoMacarios/RedeEsperanca" target="_blank" class="pbtn">Ver código ↗</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</div>
+
+<!-- DIFERENCIAIS -->
+<div class="band band-navy">
+  <section id="diferenciais">
+    <h2 class="section-title">Por que me <span>escolher</span></h2>
+    <p class="section-desc">O que eu já entreguei na prática — não só o que eu prometo.</p>
+
+    <div class="dif-grid reveal">
+      <div class="dif-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>BarberVez em produção, com barbearia pagando pelo sistema</div>
+      <div class="dif-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Sistema de válvulas que reduziu em 30% o tempo de localização</div>
+      <div class="dif-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Financeiro e comissões individuais por barbeiro no BarberVez</div>
+      <div class="dif-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Login e acesso restrito com Supabase Auth e RLS</div>
+      <div class="dif-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Histórico rastreável de cada movimentação no banco</div>
+      <div class="dif-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Alertas automáticos de validade e datas de revisão</div>
+      <div class="dif-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Código versionado no GitHub e deploy na Vercel</div>
+      <div class="dif-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Único desenvolvedor da equipe no hackathon da APAE</div>
     </div>
 
-    <a href="https://www.linkedin.com/in/ricardo-macarios-" target="_blank" class="btn-msg">
-      ✉ Enviar Mensagem
-    </a>
-  </div>
-</section>
+    <div class="center">
+      <a href="#contato" class="btn-primary">Vamos conversar</a>
+    </div>
+  </section>
+</div>
+
+<!-- CONTATO -->
+<div class="band band-cta">
+  <section id="contato">
+    <div class="contato-center reveal">
+      <h2 class="cta-title">Seu próximo projeto começa com <span>uma conversa.</span></h2>
+      <p class="contato-sub">Estou aberto a oportunidades CLT, freelances e colaborações em projetos desafiadores.</p>
+      <div class="contato-loc">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        São Joaquim da Barra, Brasil — Remoto ou presencial
+      </div>
+
+      <div class="contato-cards">
+        <a href="https://github.com/RicardoMacarios" target="_blank" class="contato-card">
+          <div class="icon-circle">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.3 6.4-1.5 6.4-7A5.4 5.4 0 0 0 20 4.8 5 5 0 0 0 19.9 1S18.7.6 16 2.5a13.4 13.4 0 0 0-7 0C6.3.6 5.1 1 5.1 1A5 5 0 0 0 5 4.8a5.4 5.4 0 0 0-1.5 3.7c0 5.4 3.3 6.6 6.4 7a3.4 3.4 0 0 0-.9 2.6V22"/></svg>
+          </div>
+          <div>
+            <span>GitHub</span>
+            <small>Meus repositórios</small>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/ricardo-macarios-" target="_blank" class="contato-card">
+          <div class="icon-circle">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <div>
+            <span>LinkedIn</span>
+            <small>Perfil profissional</small>
+          </div>
+        </a>
+        <a href="mailto:juniormacarios92@gmail.com" class="contato-card">
+          <div class="icon-circle">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </div>
+          <div>
+            <span>E-mail</span>
+            <small>juniormacarios92@gmail.com</small>
+          </div>
+        </a>
+      </div>
+
+      <div class="cta-btns">
+      <a href="https://wa.me/5516997485859?text=Ol%C3%A1%20Ricardo%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar!" target="_blank" class="btn-primary btn-glow">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+        Enviar mensagem
+      </a>
+      <a href="curriculo-ricardo-parise.pdf" download class="btn-secondary btn-cv">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+        Baixar currículo
+      </a>
+      </div>
+    </div>
+  </section>
+</div>
 
 <footer>
   <p>Desenvolvido por <span class="footer-destaque">Ricardo Parise Macarios Junior</span> — 2026</p>
 </footer>
+
+<!-- BOTÃO FLUTUANTE -->
+<a href="https://wa.me/5516997485859?text=Ol%C3%A1%20Ricardo%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar!" target="_blank" class="float-btn" aria-label="Falar comigo no WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+</a>
 
 <script src="script.js"></script>
 </body>
