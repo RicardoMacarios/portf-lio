@@ -6,469 +6,628 @@
   <title>Ricardo Parise | Desenvolvedor Backend</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Instrument+Serif:ital@1&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="nav">
-  <div class="logo">RP<span>.</span></div>
-  <ul class="nav-links" id="nav-links">
-    <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#habilidades">Habilidades</a></li>
-    <li><a href="#processo">Processo</a></li>
-    <li><a href="#projetos">Projetos</a></li>
-    <li><a href="#diferenciais">Diferenciais</a></li>
-    <li><a href="#contato">Contato</a></li>
-  </ul>
-  <a href="https://github.com/RicardoMacarios" target="_blank" class="nav-btn">GitHub ↗</a>
-  <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu">
+<!-- BARRA DE PROGRESSO -->
+<div class="progresso" id="progresso" aria-hidden="true"></div>
+
+<!-- TOPO MOBILE -->
+<header class="topbar">
+  <a href="#inicio" class="topbar-logo">
+    <img src="img/perfil/foto.jpg" alt="">
+    Ricardo Parise
+  </a>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
     <span></span>
     <span></span>
     <span></span>
   </button>
-</nav>
-
-<!-- HERO -->
-<header class="hero">
-  <div class="hero-bg" aria-hidden="true">
-    <div class="hero-bg-row outline">RICARDO PARISE</div>
-    <div class="hero-bg-row filled">RICARDO <span>PARISE</span></div>
-    <div class="hero-bg-row outline">RICARDO PARISE</div>
-  </div>
-  <div class="hero-grid" aria-hidden="true"></div>
-  <div class="hero-glow" aria-hidden="true"></div>
-
-  <div class="hero-content">
-    <div class="badge">
-      <div class="badge-dot"></div>
-      Disponível para oportunidades
-    </div>
-
-    <h1 class="hero-title">
-      Transformo lógica em <span>soluções reais</span>
-    </h1>
-
-    <p class="hero-sub">
-      Sou <strong>Ricardo Parise Macarios Junior</strong>, desenvolvedor backend. Criei o <strong>BarberVez</strong>, um SaaS de agendamento para barbearias em produção com cliente pagante.
-    </p>
-
-    <div class="hero-btns">
-      <a href="#projetos" class="btn-primary">Ver meus projetos</a>
-      <a href="#contato" class="btn-secondary">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-        Entrar em contato
-      </a>
-      <a href="curriculo-ricardo-parise.pdf" download class="btn-secondary">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
-        Baixar currículo
-      </a>
-    </div>
-
-    <div class="stats">
-      <div class="stat">
-        <div class="stat-num">6</div>
-        <div class="stat-label">Projetos entregues</div>
-      </div>
-      <div class="stat-sep"></div>
-      <div class="stat">
-        <div class="stat-num">+2</div>
-        <div class="stat-label">Anos estudando</div>
-      </div>
-      <div class="stat-sep"></div>
-      <div class="stat">
-        <div class="stat-num">1</div>
-        <div class="stat-label">SaaS em produção</div>
-      </div>
-    </div>
-  </div>
 </header>
 
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <div class="perfil">
+    <div class="sidebar-foto">
+      <img src="img/perfil/foto.jpg" alt="Ricardo Parise Macarios Junior">
+      <span class="online" title="Disponível para oportunidades"></span>
+    </div>
+    <strong class="perfil-nome">Ricardo Parise</strong>
+    <span class="perfil-cargo">Desenvolvedor Backend</span>
+  </div>
+
+  <nav class="sidebar-nav" aria-label="Navegação principal">
+    <a href="#inicio" class="ativo"><span class="nav-num">01</span>Início</a>
+    <a href="#sobre"><span class="nav-num">02</span>Sobre</a>
+    <a href="#trajetoria"><span class="nav-num">03</span>Experiências</a>
+    <a href="#tecnologias"><span class="nav-num">04</span>Tecnologias</a>
+    <a href="#projetos"><span class="nav-num">05</span>Projetos</a>
+    <a href="#contato"><span class="nav-num">06</span>Contato</a>
+  </nav>
+
+  <a href="curriculo-ricardo-parise.pdf" download class="sidebar-cv">Download CV</a>
+
+  <div class="sidebar-sociais">
+    <a href="https://www.linkedin.com/in/ricardo-macarios-" target="_blank" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg>
+    </a>
+    <a href="https://github.com/RicardoMacarios" target="_blank" aria-label="GitHub">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.3 6.4-1.5 6.4-7A5.4 5.4 0 0 0 20 4.8 5 5 0 0 0 19.9 1S18.7.6 16 2.5a13.4 13.4 0 0 0-7 0C6.3.6 5.1 1 5.1 1A5 5 0 0 0 5 4.8a5.4 5.4 0 0 0-1.5 3.7c0 5.4 3.3 6.6 6.4 7a3.4 3.4 0 0 0-.9 2.6V22"/></svg>
+    </a>
+    <a href="https://wa.me/5516997485859?text=Ol%C3%A1%20Ricardo%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar!" target="_blank" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+    </a>
+  </div>
+</aside>
+<div class="sidebar-fundo" id="sidebar-fundo"></div>
+
+<main class="main">
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <div class="hero-grid">
+    <div class="hero-content">
+      <span class="status"><span class="status-dot"></span>Disponível para oportunidades</span>
+
+      <p class="hero-digitando"><span class="prompt">&gt;</span><span id="digitando">Desenvolvedor Backend</span><span class="cursor" aria-hidden="true"></span></p>
+
+      <h1 class="hero-title">Olá, eu sou<br><em>Ricardo Parise</em></h1>
+
+      <p class="hero-sub">
+        Desenvolvedor backend e fundador do <strong>BarberVez</strong>, um SaaS de agendamento para barbearias em produção com cliente pagante.
+      </p>
+
+      <div class="hero-btns">
+        <a href="#contato" class="btn-primary">
+          Vamos conversar
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#projetos" class="btn-secondary">Ver projetos</a>
+      </div>
+
+      <div class="hero-stats">
+        <div><strong>6+</strong><span>projetos entregues</span></div>
+        <div><strong>1</strong><span>SaaS em produção</span></div>
+        <div><strong>2+</strong><span>anos estudando</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="code-card">
+        <div class="code-topo">
+          <span class="bolinhas"><i></i><i></i><i></i></span>
+          <span class="code-arquivo">ricardo.js</span>
+        </div>
+<pre class="code"><span class="c">// quem sou eu, em código</span>
+<span class="k">const</span> <span class="v">ricardo</span> = {
+  cargo: <span class="s">'Desenvolvedor Backend'</span>,
+  local: <span class="s">'São Joaquim da Barra, SP'</span>,
+  stack: [<span class="s">'Node.js'</span>, <span class="s">'PostgreSQL'</span>, <span class="s">'React'</span>],
+  emProducao: <span class="s">'BarberVez'</span>,
+  aprendendo: [<span class="s">'PHP'</span>, <span class="s">'Express'</span>],
+  disponivel: <span class="k">true</span>,
+};</pre>
+      </div>
+
+      <div class="selo-flutuante">
+        <span class="selo-icone"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span>
+        <div>
+          <strong>BarberVez</strong>
+          <small><span class="live-dot"></span>Em produção · cliente pagante</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-trilho"><span><i class="devicon-nodejs-plain colored"></i>Node.js</span><span><i class="devicon-express-original"></i>Express</span><span><i class="devicon-postgresql-plain colored"></i>PostgreSQL</span><span><i class="devicon-supabase-plain colored"></i>Supabase</span><span><i class="devicon-react-original colored"></i>React</span><span><i class="devicon-nextjs-plain"></i>Next.js</span><span><i class="devicon-typescript-plain colored"></i>TypeScript</span><span><i class="devicon-javascript-plain colored"></i>JavaScript</span><span><i class="devicon-tailwindcss-original colored"></i>Tailwind CSS</span><span><i class="devicon-php-plain colored"></i>PHP</span><span><i class="devicon-python-plain colored"></i>Python</span><span><i class="devicon-git-plain colored"></i>Git</span><span><i class="devicon-vercel-original"></i>Vercel</span><span><i class="devicon-nodejs-plain colored"></i>Node.js</span><span><i class="devicon-express-original"></i>Express</span><span><i class="devicon-postgresql-plain colored"></i>PostgreSQL</span><span><i class="devicon-supabase-plain colored"></i>Supabase</span><span><i class="devicon-react-original colored"></i>React</span><span><i class="devicon-nextjs-plain"></i>Next.js</span><span><i class="devicon-typescript-plain colored"></i>TypeScript</span><span><i class="devicon-javascript-plain colored"></i>JavaScript</span><span><i class="devicon-tailwindcss-original colored"></i>Tailwind CSS</span><span><i class="devicon-php-plain colored"></i>PHP</span><span><i class="devicon-python-plain colored"></i>Python</span><span><i class="devicon-git-plain colored"></i>Git</span><span><i class="devicon-vercel-original"></i>Vercel</span></div>
+  </div>
+</section>
+
 <!-- SOBRE -->
-<div class="band band-navy">
-  <section id="sobre">
-    <div class="sobre-grid reveal">
-      <div class="sobre-foto">
-        <img src="img/perfil/foto.jpg" alt="Ricardo Parise Macarios Junior" class="foto-perfil">
+<section id="sobre">
+  <span class="kicker">01 / sobre</span>
+  <h2 class="section-title">Sobre <em>mim</em></h2>
+
+  <div class="sobre-grid reveal">
+    <div class="sobre-cards">
+      <div class="stat-card">
+        <div class="stat-num">2<span>+</span></div>
+        <div class="stat-label">Anos estudando programação</div>
       </div>
-
-      <div class="sobre-info">
-        <span class="pill"><span class="pill-dot"></span>Desenvolvedor Backend</span>
-        <h2 class="section-title left">Ricardo <span>Parise</span></h2>
-        <p class="sobre-text">
-          Sou estudante de <strong>Sistemas de Informação na FAFRAM</strong> e fundador do <strong>BarberVez</strong>, um SaaS de agendamento para barbearias em produção com cliente pagante — que desenvolvo sozinho, do requisito ao suporte.
-        </p>
-        <p class="sobre-text">
-          Trabalho como auxiliar de laboratório na <strong>Usina Alta Mogiana</strong>, onde criei os sistemas internos de gerenciamento de válvulas e de estoque químico. Hoje foco em backend, estudando <strong>Node.js, Express, PostgreSQL, PHP e Java</strong>.
-        </p>
-
-        <div class="sobre-cards">
-          <div class="mini-card">
-            <div class="icon-circle">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>
-            </div>
-            SaaS em produção
-          </div>
-          <div class="mini-card">
-            <div class="icon-circle">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
-            </div>
-            Autodidata
-          </div>
-          <div class="mini-card">
-            <div class="icon-circle">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
-            </div>
-            Autenticação &amp; RLS
-          </div>
-          <div class="mini-card">
-            <div class="icon-circle">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
-            </div>
-            Código aberto no GitHub
-          </div>
-        </div>
+      <div class="stat-card">
+        <div class="stat-num">6<span>+</span></div>
+        <div class="stat-label">Projetos entregues</div>
+      </div>
+      <div class="info-card">
+        <span class="rotulo">Cargo atual</span>
+        <strong>Fundador e Desenvolvedor</strong>
+        <small>BarberVez</small>
+      </div>
+      <div class="info-card">
+        <span class="rotulo">Formação</span>
+        <strong>Sistemas de Informação</strong>
+        <small>FAFRAM — 2025 a 2028 (previsto)</small>
       </div>
     </div>
-  </section>
-</div>
 
-<!-- HABILIDADES -->
-<div class="band band-black">
-  <section id="habilidades">
-    <h2 class="section-title">Tecnologias &amp; <span>Competências</span></h2>
-    <p class="section-desc">Ferramentas e tecnologias que utilizo para construir soluções sólidas e escaláveis.</p>
+    <div class="sobre-texto">
+      <p>
+        Meu nome é <strong>Ricardo Parise Macarios Junior</strong>, sou estudante de <strong>Sistemas de Informação na FAFRAM</strong> e estou em transição de carreira para a área de tecnologia, com foco em <strong>desenvolvimento backend</strong>.
+      </p>
+      <p>
+        Sou fundador do <strong>BarberVez</strong>, um SaaS de agendamento para barbearias em produção com cliente pagante — que desenvolvo sozinho, do requisito ao suporte, passando por precificação e deploy.
+      </p>
+      <p>
+        Trabalho como auxiliar de laboratório na <strong>Usina Alta Mogiana</strong>, realizando análises de cana pelo método PCTS. Hoje estudo <strong>Node.js, Express, PostgreSQL e PHP</strong>, e construo interfaces com <strong>React e Next.js</strong>.
+      </p>
+    </div>
+  </div>
+</section>
 
-    <div class="skills-grid reveal">
-      <div class="skill-card">
-        <div class="icon-circle">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
-        </div>
-        <h4>Linguagens</h4>
-        <div class="skill-tags">
-          <span class="tag">JavaScript</span>
-          <span class="tag">TypeScript</span>
-          <span class="tag">Python</span>
-          <span class="tag">SQL</span>
-          <span class="tag">PHP</span>
-          <span class="tag">Java (aprendendo)</span>
-          <span class="tag">HTML5</span>
-          <span class="tag">CSS3</span>
-        </div>
+<!-- TRAJETÓRIA -->
+<section id="trajetoria">
+  <span class="kicker">02 / experiência</span>
+  <h2 class="section-title">Minha <em>trajetória</em></h2>
+
+  <div class="trajetoria reveal">
+    <div class="traj-lista" role="tablist" aria-label="Experiências">
+      <button class="traj-item ativo" role="tab" aria-selected="true" aria-controls="traj-barbervez" id="tab-barbervez">
+        <span class="traj-logo">BV</span>
+        <span class="traj-texto"><span class="traj-nome">BarberVez</span>
+        <span class="traj-data">Jul 2026 - Atualmente</span></span>
+      </button>
+      <button class="traj-item" role="tab" aria-selected="false" aria-controls="traj-usina" id="tab-usina" tabindex="-1">
+        <span class="traj-logo">UA</span>
+        <span class="traj-texto"><span class="traj-nome">Usina Alta Mogiana</span>
+        <span class="traj-data">Abr 2025 - Atualmente</span></span>
+      </button>
+      <button class="traj-item" role="tab" aria-selected="false" aria-controls="traj-fafram" id="tab-fafram" tabindex="-1">
+        <span class="traj-logo">FA</span>
+        <span class="traj-texto"><span class="traj-nome">FAFRAM</span>
+        <span class="traj-data">2025 - 2028 (previsto)</span></span>
+      </button>
+      <button class="traj-item" role="tab" aria-selected="false" aria-controls="traj-apae" id="tab-apae" tabindex="-1">
+        <span class="traj-logo">AP</span>
+        <span class="traj-texto"><span class="traj-nome">Hackathon APAE</span>
+        <span class="traj-data">Hackathon acadêmico</span></span>
+      </button>
+      <button class="traj-item" role="tab" aria-selected="false" aria-controls="traj-etec" id="tab-etec" tabindex="-1">
+        <span class="traj-logo">ET</span>
+        <span class="traj-texto"><span class="traj-nome">ETEC Pedro Badran</span>
+        <span class="traj-data">Concluído em 2024</span></span>
+      </button>
+    </div>
+
+    <div class="traj-painel" role="tabpanel" id="traj-barbervez" aria-labelledby="tab-barbervez">
+      <div class="traj-topo">
+        <h3>Fundador e Desenvolvedor</h3>
+        <span class="traj-badge">Jul 2026 - Atualmente</span>
       </div>
-      <div class="skill-card">
-        <div class="icon-circle">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>
-        </div>
-        <h4>Banco de Dados</h4>
-        <div class="skill-tags">
-          <span class="tag">PostgreSQL</span>
-          <span class="tag">Supabase</span>
-          <span class="tag">Realtime</span>
-          <span class="tag">PostgREST</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="icon-circle">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg>
-        </div>
-        <h4>Ferramentas</h4>
-        <div class="skill-tags">
-          <span class="tag">Git</span>
-          <span class="tag">GitHub</span>
-          <span class="tag">Vercel</span>
-          <span class="tag">ESLint</span>
-          <span class="tag">VS Code</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="icon-circle">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 22h8M12 18v4"/></svg>
-        </div>
-        <h4>Frontend</h4>
-        <div class="skill-tags">
-          <span class="tag">React</span>
-          <span class="tag">Next.js</span>
-          <span class="tag">Vite</span>
-          <span class="tag">Tailwind CSS</span>
-          <span class="tag">React Router</span>
-          <span class="tag">TanStack Query</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="icon-circle">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg>
-        </div>
-        <h4>Backend &amp; Auth</h4>
-        <div class="skill-tags">
-          <span class="tag">Node.js</span>
-          <span class="tag">Express</span>
-          <span class="tag">REST API</span>
-          <span class="tag">Autenticação</span>
-          <span class="tag">CRUD</span>
-          <span class="tag">RLS</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="icon-circle">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>
-        </div>
-        <h4>Boas Práticas</h4>
-        <div class="skill-tags">
-          <span class="tag">Clean Code</span>
-          <span class="tag">Versionamento</span>
-          <span class="tag">Documentação</span>
-        </div>
+      <p class="traj-empresa">BarberVez · São Joaquim da Barra, SP</p>
+      <p>Fundei e desenvolvo sozinho o BarberVez, SaaS de agendamento para barbearias já em produção com cliente pagante em modelo de assinatura mensal.</p>
+      <ul class="traj-lista-itens">
+        <li>Construí o sistema com React, Vite, Tailwind CSS e React Router, usando Supabase (PostgreSQL, autenticação, RPCs e Storage) como backend.</li>
+        <li>Implementei login e controle financeiro individuais por barbeiro, isolando comissões e faturamento de cada profissional.</li>
+        <li>Conduzo todo o ciclo do produto: requisitos, precificação, suporte e expansão por indicação.</li>
+        <li>Desenvolvo sites para as barbearias clientes, com deploy na Vercel.</li>
+      </ul>
+      <div class="traj-tags">
+        <span class="tag">React</span>
+        <span class="tag">Supabase</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Tailwind CSS</span>
+        <span class="tag">Vercel</span>
       </div>
     </div>
-  </section>
-</div>
+
+    <div class="traj-painel" role="tabpanel" id="traj-usina" aria-labelledby="tab-usina" hidden>
+      <div class="traj-topo">
+        <h3>Auxiliar de Laboratório</h3>
+        <span class="traj-badge">Abr 2025 - Atualmente</span>
+      </div>
+      <p class="traj-empresa">Usina Alta Mogiana · São Joaquim da Barra, SP</p>
+      <p>Realizo análises de cana pelo método PCTS, garantindo precisão nos resultados que apoiam decisões do processo produtivo.</p>
+      <div class="traj-tags">
+        <span class="tag">Análises PCTS</span>
+        <span class="tag">Laboratório</span>
+      </div>
+    </div>
+
+    <div class="traj-painel" role="tabpanel" id="traj-fafram" aria-labelledby="tab-fafram" hidden>
+      <div class="traj-topo">
+        <h3>Bacharelado em Sistemas de Informação</h3>
+        <span class="traj-badge">2025 - 2028</span>
+      </div>
+      <p class="traj-empresa">FAFRAM · São Joaquim da Barra, SP</p>
+      <p>Graduação em andamento, com previsão de conclusão em 2028. A faculdade dá a base teórica que aplico nos projetos reais que desenvolvo em paralelo.</p>
+      <ul class="traj-lista-itens">
+        <li>Programação Estruturada.</li>
+        <li>Lógica e Algoritmos II.</li>
+        <li>Técnicas de Programação II.</li>
+      </ul>
+      <div class="traj-tags">
+        <span class="tag">Algoritmos</span>
+        <span class="tag">Lógica</span>
+        <span class="tag">Programação</span>
+      </div>
+    </div>
+
+    <div class="traj-painel" role="tabpanel" id="traj-apae" aria-labelledby="tab-apae" hidden>
+      <div class="traj-topo">
+        <h3>Desenvolvedor — VidaAPAE</h3>
+        <span class="traj-badge">Hackathon</span>
+      </div>
+      <p class="traj-empresa">APAE Ituverava · Hackathon acadêmico</p>
+      <p>Sistema de gestão de pacientes para a APAE Ituverava, desenvolvido em equipe, atuando como <strong>único desenvolvedor do projeto</strong>.</p>
+      <ul class="traj-lista-itens">
+        <li>Login com controle de acesso por perfil.</li>
+        <li>Prontuário digital e avaliações por sessão.</li>
+        <li>Geração de relatórios em PDF.</li>
+        <li>Integração com WhatsApp para comunicação com as famílias.</li>
+      </ul>
+      <div class="traj-tags">
+        <span class="tag">React</span>
+        <span class="tag">Vite</span>
+        <span class="tag">Tailwind CSS</span>
+      </div>
+    </div>
+
+    <div class="traj-painel" role="tabpanel" id="traj-etec" aria-labelledby="tab-etec" hidden>
+      <div class="traj-topo">
+        <h3>Técnico em Química</h3>
+        <span class="traj-badge">Concluído em 2024</span>
+      </div>
+      <p class="traj-empresa">ETEC Pedro Badran · São Joaquim da Barra, SP</p>
+      <p>Formação técnica que me levou ao laboratório da Usina Alta Mogiana, onde atuo hoje como auxiliar de laboratório.</p>
+      <ul class="traj-lista-itens">
+        <li>Base em análises laboratoriais e controle de qualidade.</li>
+      </ul>
+      <div class="traj-tags">
+        <span class="tag">Química</span>
+        <span class="tag">Laboratório</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STACK & FERRAMENTAS -->
+<section id="tecnologias">
+  <span class="kicker">03 / tecnologias</span>
+  <h2 class="section-title">Stack &amp; <em>ferramentas</em></h2>
+
+  <div class="stack-grid reveal">
+    <div class="stack-card">
+      <span class="rotulo">Linguagens</span>
+      <div class="chips">
+        <span class="chip"><i class="devicon-javascript-plain colored"></i>JavaScript</span>
+        <span class="chip"><i class="devicon-typescript-plain colored"></i>TypeScript</span>
+        <span class="chip"><i class="devicon-python-plain colored"></i>Python</span>
+        <span class="chip"><i class="devicon-php-plain colored"></i>PHP</span>
+        <span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/></svg>SQL</span>
+        <span class="chip"><i class="devicon-html5-plain colored"></i>HTML5</span>
+        <span class="chip"><i class="devicon-css3-plain colored"></i>CSS3</span>
+      </div>
+    </div>
+
+    <div class="stack-card">
+      <span class="rotulo">Frontend</span>
+      <div class="chips">
+        <span class="chip"><i class="devicon-react-original colored"></i>React</span>
+        <span class="chip"><i class="devicon-nextjs-plain"></i>Next.js</span>
+        <span class="chip"><i class="devicon-vitejs-plain colored"></i>Vite</span>
+        <span class="chip"><i class="devicon-tailwindcss-original colored"></i>Tailwind CSS</span>
+        <span class="chip"><i class="devicon-reactrouter-plain colored"></i>React Router</span>
+        <span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>TanStack Query</span>
+      </div>
+    </div>
+
+    <div class="stack-card">
+      <span class="rotulo">Backend &amp; Auth</span>
+      <div class="chips">
+        <span class="chip"><i class="devicon-nodejs-plain colored"></i>Node.js</span>
+        <span class="chip"><i class="devicon-express-original"></i>Express</span>
+        <span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>REST API</span>
+        <span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Autenticação</span>
+        <span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>CRUD</span>
+        <span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/></svg>RLS</span>
+      </div>
+    </div>
+
+    <div class="stack-card">
+      <span class="rotulo">Banco de Dados</span>
+      <div class="chips">
+        <span class="chip"><i class="devicon-postgresql-plain colored"></i>PostgreSQL</span>
+        <span class="chip"><i class="devicon-supabase-plain colored"></i>Supabase</span>
+        <span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>Realtime</span>
+        <span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>PostgREST</span>
+      </div>
+    </div>
+
+    <div class="stack-card largo">
+      <span class="rotulo">Ferramentas</span>
+      <div class="chips">
+        <span class="chip"><i class="devicon-git-plain colored"></i>Git</span>
+        <span class="chip"><i class="devicon-github-original"></i>GitHub</span>
+        <span class="chip"><i class="devicon-vercel-original"></i>Vercel</span>
+        <span class="chip"><i class="devicon-vscode-plain colored"></i>VS Code</span>
+      </div>
+    </div>
+  </div>
+
+  <span class="kicker sub">habilidades</span>
+  <h2 class="section-title">Além do <em>código</em></h2>
+
+  <div class="habilidades-grid reveal">
+    <div class="hab-card">
+      <div class="hab-icone"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg></div>
+      <h4>Boas práticas</h4>
+      <p>Clean Code, versionamento com Git e documentação do que construo.</p>
+    </div>
+    <div class="hab-card">
+      <div class="hab-icone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
+      <h4>Autodidata</h4>
+      <p>Curioso, dedicado e com facilidade para aprender novas tecnologias de forma autônoma.</p>
+    </div>
+    <div class="hab-card">
+      <div class="hab-icone"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div>
+      <h4>Visão de produto</h4>
+      <p>Do requisito ao suporte: precificação, deploy e acompanhamento do cliente no BarberVez.</p>
+    </div>
+    <div class="hab-card">
+      <div class="hab-icone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg></div>
+      <h4>Idiomas</h4>
+      <p>Português nativo e inglês básico.</p>
+    </div>
+  </div>
+</section>
 
 <!-- PROCESSO -->
-<div class="band band-navy">
-  <section id="processo">
-    <h2 class="section-title">Como eu <span>trabalho</span></h2>
-    <p class="section-desc">Do problema ao sistema no ar, cada projeto segue um caminho claro.</p>
+<section id="processo">
+  <span class="kicker">04 / processo</span>
+  <h2 class="section-title">Como eu <em>trabalho</em></h2>
+  <p class="section-desc">Do problema ao sistema no ar, cada projeto segue um caminho claro.</p>
 
-    <div class="steps reveal">
-      <div class="step">
-        <div class="step-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-        </div>
-        <span class="step-num">Etapa 1</span>
-        <h4>Entendimento</h4>
-        <p>Converso para entender o problema real e quem vai usar o sistema.</p>
+  <div class="steps reveal">
+    <div class="step">
+      <div class="step-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
       </div>
-      <div class="step">
-        <div class="step-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6M9 16h4"/></svg>
-        </div>
-        <span class="step-num">Etapa 2</span>
-        <h4>Planejamento</h4>
-        <p>Modelo o banco de dados e defino a estrutura da aplicação.</p>
-      </div>
-      <div class="step">
-        <div class="step-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
-        </div>
-        <span class="step-num">Etapa 3</span>
-        <h4>Desenvolvimento</h4>
-        <p>Código limpo, versionado e com autenticação segura.</p>
-      </div>
-      <div class="step">
-        <div class="step-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>
-        </div>
-        <span class="step-num">Etapa 4</span>
-        <h4>Testes</h4>
-        <p>Valido cada fluxo para garantir que tudo funciona como esperado.</p>
-      </div>
-      <div class="step">
-        <div class="step-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.2 2.2 0 0 0-2.9-.1z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22.4 22.4 0 0 1-4 2z"/></svg>
-        </div>
-        <span class="step-num">Etapa 5</span>
-        <h4>Entrega</h4>
-        <p>Deploy em produção e acompanhamento para ajustes.</p>
-      </div>
+      <span class="step-num">Etapa 1</span>
+      <h4>Entendimento</h4>
+      <p>Converso para entender o problema real e quem vai usar o sistema.</p>
     </div>
-  </section>
-</div>
+    <div class="step">
+      <div class="step-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6M9 16h4"/></svg>
+      </div>
+      <span class="step-num">Etapa 2</span>
+      <h4>Planejamento</h4>
+      <p>Modelo o banco de dados e defino a estrutura da aplicação.</p>
+    </div>
+    <div class="step">
+      <div class="step-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
+      </div>
+      <span class="step-num">Etapa 3</span>
+      <h4>Desenvolvimento</h4>
+      <p>Código limpo, versionado e com autenticação segura.</p>
+    </div>
+    <div class="step">
+      <div class="step-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>
+      </div>
+      <span class="step-num">Etapa 4</span>
+      <h4>Testes</h4>
+      <p>Valido cada fluxo para garantir que tudo funciona como esperado.</p>
+    </div>
+    <div class="step">
+      <div class="step-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.2 2.2 0 0 0-2.9-.1z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22.4 22.4 0 0 1-4 2z"/></svg>
+      </div>
+      <span class="step-num">Etapa 5</span>
+      <h4>Entrega</h4>
+      <p>Deploy em produção e acompanhamento para ajustes.</p>
+    </div>
+  </div>
+</section>
 
 <!-- PROJETOS -->
-<div class="band band-black">
-  <section id="projetos">
-    <h2 class="section-title">Trabalhos <span>Recentes</span></h2>
-    <p class="section-desc">Um SaaS com cliente pagante, um site para esse cliente, dois sistemas internos em uso na indústria e projetos para ONGs e saúde.</p>
+<section id="projetos">
+  <span class="kicker">05 / projetos</span>
+  <h2 class="section-title">Trabalhos <em>recentes</em></h2>
+  <p class="section-desc">Um SaaS com cliente pagante, um site para esse cliente, sistemas de controle e projetos para ONGs e saúde.</p>
 
-    <article class="projeto-destaque reveal">
-      <a href="https://barbervez.com.br/login" target="_blank" class="destaque-img">
-        <img src="img/barbervez/capa.jpg" alt="Tela de login do BarberVez em produção" loading="lazy">
-        <div class="projeto-badges">
-          <span class="pbadge pbadge-live"><span class="live-dot"></span>Em produção</span>
-          <span class="pbadge pbadge-dest">Cliente pagante</span>
+  <article class="projeto-destaque reveal">
+    <a href="https://barbervez.com.br/login" target="_blank" class="destaque-img">
+      <img src="img/barbervez/capa.jpg" alt="Tela de login do BarberVez em produção" loading="lazy">
+      <div class="projeto-badges">
+        <span class="pbadge pbadge-live"><span class="live-dot"></span>Em produção</span>
+        <span class="pbadge pbadge-dest">Cliente pagante</span>
+      </div>
+    </a>
+    <div class="destaque-body">
+      <span class="step-num">Projeto principal · SaaS</span>
+      <h3>BarberVez</h3>
+      <p>Plataforma de gestão para barbearias, <strong>em produção e com cliente pagante</strong>. O cliente agenda o horário online e o dono acompanha o negócio num painel próprio.</p>
+      <ul class="destaque-list">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Agendamento online para clientes</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Visão financeira para o dono</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 16v-4M12 16V8M17 16v-7"/></svg>Faturamento mensal</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg>Melhor dia da semana</li>
+      </ul>
+      <div class="projeto-tags">
+        <span class="tag">React</span>
+        <span class="tag">Vite</span>
+        <span class="tag">Tailwind CSS</span>
+        <span class="tag">React Router</span>
+        <span class="tag">TanStack Query</span>
+        <span class="tag">Supabase</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Realtime</span>
+        <span class="tag">Vercel</span>
+      </div>
+      <a href="https://barbervez.com.br/login" target="_blank" class="btn-primary">Ver online ↗</a>
+    </div>
+  </article>
+
+  <article class="projeto-destaque reverse reveal">
+    <a href="https://alves-barber-pearl.vercel.app/" target="_blank" class="destaque-img">
+      <img src="img/alves-barbershop/capa.jpg" alt="Landing page da Alves BarberShop" loading="lazy">
+      <div class="projeto-badges">
+        <span class="pbadge pbadge-live"><span class="live-dot"></span>No ar</span>
+        <span class="pbadge pbadge-dest">Cliente BarberVez</span>
+      </div>
+    </a>
+    <div class="destaque-body">
+      <span class="step-num">Site para cliente · Landing page</span>
+      <h3>Alves BarberShop</h3>
+      <p>Landing page feita para a <strong>Alves BarberShop, barbearia cliente do BarberVez</strong>. O botão de agendar leva direto para a agenda da barbearia dentro do BarberVez.</p>
+      <ul class="destaque-list">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Agendamento integrado ao BarberVez</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>Contato direto pelo WhatsApp</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>Layout responsivo</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.2 2.2 0 0 0-2.9-.1z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22.4 22.4 0 0 1-4 2z"/></svg>Deploy na Vercel</li>
+      </ul>
+      <div class="projeto-tags">
+        <span class="tag">HTML5</span>
+        <span class="tag">CSS3</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Vercel</span>
+      </div>
+      <a href="https://alves-barber-pearl.vercel.app/" target="_blank" class="btn-primary">Ver site ↗</a>
+    </div>
+  </article>
+
+  <div class="projetos-grid reveal">
+    <article class="projeto-card">
+      <div class="projeto-thumb has-img carrossel moldura" data-carrossel>
+        <div class="carrossel-trilho">
+          <img src="img/estoquequim/1-visao-geral.jpg" alt="EstoqueQuím: visão geral com alertas de validade" loading="lazy">
+          <img src="img/estoquequim/2-estoque.jpg" alt="EstoqueQuím: tabela de estoque com status de validade" loading="lazy">
+          <img src="img/estoquequim/3-cadastro.jpg" alt="EstoqueQuím: cadastro de produto com fabricante e lote" loading="lazy">
+          <img src="img/estoquequim/4-movimentacao.jpg" alt="EstoqueQuím: registro de movimentação" loading="lazy">
+          <img src="img/estoquequim/5-historico.jpg" alt="EstoqueQuím: histórico de movimentações" loading="lazy">
         </div>
-      </a>
-      <div class="destaque-body">
-        <span class="step-num">Projeto principal · SaaS</span>
-        <h3>BarberVez</h3>
-        <p>Plataforma de gestão para barbearias, <strong>em produção e com cliente pagante</strong>. O cliente agenda o horário online e o dono acompanha o negócio num painel próprio.</p>
-        <ul class="destaque-list">
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Agendamento online para clientes</li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Visão financeira para o dono</li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 16v-4M12 16V8M17 16v-7"/></svg>Faturamento mensal</li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg>Melhor dia da semana</li>
-        </ul>
+        <button class="carrossel-seta anterior" aria-label="Imagem anterior"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+        <button class="carrossel-seta proxima" aria-label="Próxima imagem"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+        <div class="carrossel-pontos"></div>
+        <div class="projeto-badges">
+          <span class="pbadge pbadge-ok">Concluído</span>
+        </div>
+      </div>
+      <div class="projeto-body">
+        <h3>EstoqueQuím</h3>
+        <p>Controle de estoque de produtos químicos com vencimento de cada reagente, registro de fabricante e lote e histórico de movimentações.</p>
+        <div class="projeto-tags">
+          <span class="tag">JavaScript</span>
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">Supabase</span>
+        </div>
+        <a href="https://github.com/RicardoMacarios/Controle-de-estoque-qu-mico" target="_blank" class="pbtn">Ver código ↗</a>
+      </div>
+    </article>
+
+    <article class="projeto-card">
+      <div class="projeto-thumb">
+        <span class="projeto-thumb-text">VÁLVULAS</span>
+        <div class="icon-circle big">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.2 4.2l2.9 2.9M16.9 16.9l2.9 2.9M1 12h4M19 12h4M4.2 19.8l2.9-2.9M16.9 7.1l2.9-2.9"/></svg>
+        </div>
+        <div class="projeto-badges">
+          <span class="pbadge pbadge-dest">Destaque</span>
+          <span class="pbadge pbadge-ok">Concluído</span>
+        </div>
+      </div>
+      <div class="projeto-body">
+        <h3>Gerenciamento de Válvulas</h3>
+        <p>Sistema para trocar o controle em papel de válvulas por um painel digital, com status em tempo real (Pronta, Entregue, Manutenção, Descartada) e assinatura digital na entrega.</p>
+        <div class="projeto-tags">
+          <span class="tag">JavaScript</span>
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">Supabase</span>
+        </div>
+        <a href="https://github.com/RicardoMacarios/valve-management-system" target="_blank" class="pbtn">Ver código ↗</a>
+      </div>
+    </article>
+
+    <article class="projeto-card">
+      <div class="projeto-thumb">
+        <span class="projeto-thumb-text">APAE</span>
+        <div class="icon-circle big">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"/><path d="M3.2 12H9l.5-1 2 4.5 2-7 1.5 3.5h5.3"/></svg>
+        </div>
+        <div class="projeto-badges">
+          <span class="pbadge pbadge-dest">Hackathon</span>
+        </div>
+      </div>
+      <div class="projeto-body">
+        <h3>VidaAPAE</h3>
+        <p>Gestão de pacientes para a APAE Ituverava, feito em hackathon <strong>como único desenvolvedor da equipe</strong>. Controle de acesso por perfil, prontuário digital, avaliações por sessão, relatórios em PDF e integração com WhatsApp.</p>
         <div class="projeto-tags">
           <span class="tag">React</span>
           <span class="tag">Vite</span>
           <span class="tag">Tailwind CSS</span>
-          <span class="tag">React Router</span>
-          <span class="tag">TanStack Query</span>
-          <span class="tag">Supabase</span>
-          <span class="tag">PostgreSQL</span>
-          <span class="tag">Realtime</span>
-          <span class="tag">Vercel</span>
         </div>
-        <a href="https://barbervez.com.br/login" target="_blank" class="btn-primary">Ver online ↗</a>
+        <a href="https://github.com/RicardoMacarios/hack-apae" target="_blank" class="pbtn">Ver código ↗</a>
       </div>
     </article>
 
-    <article class="projeto-destaque reverse reveal">
-      <a href="https://alves-barber-pearl.vercel.app/" target="_blank" class="destaque-img">
-        <img src="img/alves-barbershop/capa.jpg" alt="Landing page da Alves BarberShop" loading="lazy">
+    <article class="projeto-card">
+      <div class="projeto-thumb">
+        <span class="projeto-thumb-text">ONGS</span>
+        <div class="icon-circle big">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg>
+        </div>
         <div class="projeto-badges">
-          <span class="pbadge pbadge-live"><span class="live-dot"></span>No ar</span>
-          <span class="pbadge pbadge-dest">Cliente BarberVez</span>
+          <span class="pbadge pbadge-ok">Concluído</span>
         </div>
-      </a>
-      <div class="destaque-body">
-        <span class="step-num">Site para cliente · Landing page</span>
-        <h3>Alves BarberShop</h3>
-        <p>Landing page feita para a <strong>Alves BarberShop, barbearia cliente do BarberVez</strong>. O botão de agendar leva direto para a agenda da barbearia dentro do BarberVez.</p>
-        <ul class="destaque-list">
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Agendamento integrado ao BarberVez</li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>Contato direto pelo WhatsApp</li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>Layout responsivo</li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.2 2.2 0 0 0-2.9-.1z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22.4 22.4 0 0 1-4 2z"/></svg>Deploy na Vercel</li>
-        </ul>
+      </div>
+      <div class="projeto-body">
+        <h3>Rede Esperança</h3>
+        <p>Painel administrativo para ONGs com login, cadastro de ONGs e voluntários, criação de campanhas e dashboard. Autenticação e banco estruturados no Supabase.</p>
         <div class="projeto-tags">
-          <span class="tag">HTML5</span>
-          <span class="tag">CSS3</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">Vercel</span>
+          <span class="tag">React</span>
+          <span class="tag">Vite</span>
+          <span class="tag">Supabase</span>
         </div>
-        <a href="https://alves-barber-pearl.vercel.app/" target="_blank" class="btn-primary">Ver site ↗</a>
+        <a href="https://github.com/RicardoMacarios/RedeEsperanca" target="_blank" class="pbtn">Ver código ↗</a>
       </div>
     </article>
-
-    <div class="projetos-grid reveal">
-      <article class="projeto-card">
-        <div class="projeto-thumb has-img carrossel moldura" data-carrossel>
-          <div class="carrossel-trilho">
-            <img src="img/estoquequim/1-visao-geral.jpg" alt="EstoqueQuím: visão geral com alertas de validade" loading="lazy">
-            <img src="img/estoquequim/2-estoque.jpg" alt="EstoqueQuím: tabela de estoque com status de validade" loading="lazy">
-            <img src="img/estoquequim/3-cadastro.jpg" alt="EstoqueQuím: cadastro de produto com fabricante e lote" loading="lazy">
-            <img src="img/estoquequim/4-movimentacao.jpg" alt="EstoqueQuím: registro de movimentação" loading="lazy">
-            <img src="img/estoquequim/5-historico.jpg" alt="EstoqueQuím: histórico de movimentações" loading="lazy">
-          </div>
-          <button class="carrossel-seta anterior" aria-label="Imagem anterior"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
-          <button class="carrossel-seta proxima" aria-label="Próxima imagem"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
-          <div class="carrossel-pontos"></div>
-          <div class="projeto-badges">
-            <span class="pbadge pbadge-ok">Concluído</span>
-          </div>
-        </div>
-        <div class="projeto-body">
-          <h3>EstoqueQuím</h3>
-          <p>Controle de estoque de produtos químicos com vencimento de cada reagente, registro de fabricante e lote e histórico de movimentações. <strong>Em uso real na indústria.</strong></p>
-          <div class="projeto-tags">
-            <span class="tag">JavaScript</span>
-            <span class="tag">HTML5</span>
-            <span class="tag">CSS3</span>
-            <span class="tag">Supabase</span>
-          </div>
-          <a href="https://github.com/RicardoMacarios/Controle-de-estoque-qu-mico" target="_blank" class="pbtn">Ver código ↗</a>
-        </div>
-      </article>
-
-      <article class="projeto-card">
-        <div class="projeto-thumb">
-          <span class="projeto-thumb-text">VÁLVULAS</span>
-          <div class="icon-circle big">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.2 4.2l2.9 2.9M16.9 16.9l2.9 2.9M1 12h4M19 12h4M4.2 19.8l2.9-2.9M16.9 7.1l2.9-2.9"/></svg>
-          </div>
-          <div class="projeto-badges">
-            <span class="pbadge pbadge-dest">Destaque</span>
-            <span class="pbadge pbadge-ok">Concluído</span>
-          </div>
-        </div>
-        <div class="projeto-body">
-          <h3>Gerenciamento de Válvulas</h3>
-          <p>Substituiu o controle em papel na indústria e <strong>reduziu em 30% o tempo de localização</strong> das válvulas. Status em tempo real (Pronta, Entregue, Manutenção, Descartada) e assinatura digital na entrega.</p>
-          <div class="projeto-tags">
-            <span class="tag">JavaScript</span>
-            <span class="tag">HTML5</span>
-            <span class="tag">CSS3</span>
-            <span class="tag">Supabase</span>
-          </div>
-          <a href="https://github.com/RicardoMacarios/valve-management-system" target="_blank" class="pbtn">Ver código ↗</a>
-        </div>
-      </article>
-
-      <article class="projeto-card">
-        <div class="projeto-thumb">
-          <span class="projeto-thumb-text">APAE</span>
-          <div class="icon-circle big">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"/><path d="M3.2 12H9l.5-1 2 4.5 2-7 1.5 3.5h5.3"/></svg>
-          </div>
-          <div class="projeto-badges">
-            <span class="pbadge pbadge-dest">Hackathon</span>
-          </div>
-        </div>
-        <div class="projeto-body">
-          <h3>VidaAPAE</h3>
-          <p>Gestão de pacientes para a APAE Ituverava, feito em hackathon <strong>como único desenvolvedor da equipe</strong>. Controle de acesso por perfil, prontuário digital, avaliações por sessão, relatórios em PDF e integração com WhatsApp.</p>
-          <div class="projeto-tags">
-            <span class="tag">React</span>
-            <span class="tag">Vite</span>
-            <span class="tag">Tailwind CSS</span>
-          </div>
-          <a href="https://github.com/RicardoMacarios/hack-apae" target="_blank" class="pbtn">Ver código ↗</a>
-        </div>
-      </article>
-
-      <article class="projeto-card">
-        <div class="projeto-thumb">
-          <span class="projeto-thumb-text">ONGS</span>
-          <div class="icon-circle big">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg>
-          </div>
-          <div class="projeto-badges">
-            <span class="pbadge pbadge-ok">Concluído</span>
-          </div>
-        </div>
-        <div class="projeto-body">
-          <h3>Rede Esperança</h3>
-          <p>Painel administrativo para ONGs com login, cadastro de ONGs e voluntários, criação de campanhas e dashboard. Autenticação e banco estruturados no Supabase.</p>
-          <div class="projeto-tags">
-            <span class="tag">React</span>
-            <span class="tag">Vite</span>
-            <span class="tag">Supabase</span>
-          </div>
-          <a href="https://github.com/RicardoMacarios/RedeEsperanca" target="_blank" class="pbtn">Ver código ↗</a>
-        </div>
-      </article>
-    </div>
-  </section>
-</div>
+  </div>
+</section>
 
 <!-- DIFERENCIAIS -->
-<div class="band band-navy">
-  <section id="diferenciais">
-    <h2 class="section-title">Por que me <span>escolher</span></h2>
-    <p class="section-desc">O que eu já entreguei na prática — não só o que eu prometo.</p>
+<section id="diferenciais">
+  <span class="kicker">06 / diferenciais</span>
+  <h2 class="section-title">Por que me <em>escolher</em></h2>
+  <p class="section-desc">O que eu já entreguei na prática — não só o que eu prometo.</p>
 
-    <div class="dif-grid reveal">
-      <div class="dif-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>BarberVez em produção, com barbearia pagando pelo sistema</div>
-      <div class="dif-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Sistema de válvulas que reduziu em 30% o tempo de localização</div>
-      <div class="dif-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Financeiro e comissões individuais por barbeiro no BarberVez</div>
-      <div class="dif-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Login e acesso restrito com Supabase Auth e RLS</div>
-      <div class="dif-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Histórico rastreável de cada movimentação no banco</div>
-      <div class="dif-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Alertas automáticos de validade e datas de revisão</div>
-      <div class="dif-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Código versionado no GitHub e deploy na Vercel</div>
-      <div class="dif-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Único desenvolvedor da equipe no hackathon da APAE</div>
-    </div>
+  <div class="dif-grid reveal">
+    <div class="dif-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>BarberVez em produção, com barbearia pagando pelo sistema</div>
+    <div class="dif-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Interfaces responsivas com React e Tailwind CSS</div>
+    <div class="dif-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Financeiro e comissões individuais por barbeiro no BarberVez</div>
+    <div class="dif-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Login e acesso restrito com Supabase Auth e RLS</div>
+    <div class="dif-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Histórico rastreável de cada movimentação no banco</div>
+    <div class="dif-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Alertas automáticos de validade e datas de revisão</div>
+    <div class="dif-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Código versionado no GitHub e deploy na Vercel</div>
+    <div class="dif-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Único desenvolvedor da equipe no hackathon da APAE</div>
+  </div>
 
-    <div class="center">
-      <a href="#contato" class="btn-primary">Vamos conversar</a>
-    </div>
-  </section>
-</div>
+  <div class="center">
+    <a href="#contato" class="btn-primary">Vamos conversar</a>
+  </div>
+</section>
 
 <!-- CONTATO -->
-<div class="band band-cta">
+<div class="band-cta">
   <section id="contato">
     <div class="contato-center reveal">
       <h2 class="cta-title">Seu próximo projeto começa com <span>uma conversa.</span></h2>
@@ -520,11 +679,13 @@
       </div>
     </div>
   </section>
+
+  <footer>
+    <p>Desenvolvido por <span class="footer-destaque">Ricardo Parise Macarios Junior</span> — 2026</p>
+  </footer>
 </div>
 
-<footer>
-  <p>Desenvolvido por <span class="footer-destaque">Ricardo Parise Macarios Junior</span> — 2026</p>
-</footer>
+</main>
 
 <!-- BOTÃO FLUTUANTE -->
 <a href="https://wa.me/5516997485859?text=Ol%C3%A1%20Ricardo%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar!" target="_blank" class="float-btn" aria-label="Falar comigo no WhatsApp">
